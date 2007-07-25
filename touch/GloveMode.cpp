@@ -1,5 +1,6 @@
 /*
- * SPDX-FileCopyrightText: The LineageOS Project
+ * Copyright (C) 2025 The LineageOS Project
+ *
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -9,33 +10,31 @@
 
 #include <fstream>
 
+namespace aidl {
 namespace vendor {
 namespace lineage {
 namespace touch {
-namespace V1_0 {
-namespace implementation {
 
 const std::string kFilmStatusPath = "/sys/devices/virtual/input/lge_touch/film_status";
 
-Return<bool> GloveMode::isEnabled() {
+ndk::ScopedAStatus GloveMode::getEnabled(bool* _aidl_return) {
     std::ifstream file(kFilmStatusPath);
     int enabled;
     file >> enabled;
 
     if(enabled == 1)
-        return true;
+    *_aidl_return = (enabled == 1);
 
-    return false;
+    return ndk::ScopedAStatus::ok();
 }
 
-Return<bool> GloveMode::setEnabled(bool enabled) {
+ndk::ScopedAStatus GloveMode::setEnabled(bool enabled) {
     std::ofstream file(kFilmStatusPath);
     file << (enabled ? "1" : "0");
-    return !file.fail();
+    return !file.fail() ? ndk::ScopedAStatus::ok() : ndk::ScopedAStatus::fromExceptionCode(EX_TRANSACTION_FAILED);
 }
 
-}  // namespace implementation
-}  // namespace V1_0
-}  // namespace touch
-}  // namespace lineage
-}  // namespace vendor
+} // namespace touch
+} // namespace lineage
+} // namespace vendor
+} // namespace aidl

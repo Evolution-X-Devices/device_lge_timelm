@@ -1,14 +1,16 @@
 /*
- * SPDX-FileCopyrightText: The LineageOS Project
+ * Copyright (C) 2025 The LineageOS Project
+ *
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#ifndef VENDOR_LINEAGE_TOUCH_V1_0_TOUCHSCREENGESTURE_H
-#define VENDOR_LINEAGE_TOUCH_V1_0_TOUCHSCREENGESTURE_H
+#pragma once
 
-#include <vendor/lineage/touch/1.0/ITouchscreenGesture.h>
+#include <aidl/vendor/lineage/touch/BnTouchscreenGesture.h>
 
 #include <map>
+
+using ::aidl::vendor::lineage::touch::Gesture;
 
 namespace {
 typedef struct {
@@ -18,32 +20,23 @@ typedef struct {
 } GestureInfo;
 }  // anonymous namespace
 
+namespace aidl {
 namespace vendor {
 namespace lineage {
 namespace touch {
-namespace V1_0 {
-namespace implementation {
 
-using ::android::hardware::Return;
-using ::android::hardware::Void;
+class TouchscreenGesture : public BnTouchscreenGesture {
+public:
+    TouchscreenGesture();
+    
+    ndk::ScopedAStatus getSupportedGestures(std::vector<Gesture>* _aidl_return) override;
+    ndk::ScopedAStatus setGestureEnabled(const Gesture& gesture, bool enabled) override;
 
-class TouchscreenGesture : public ITouchscreenGesture {
-   public:
-   TouchscreenGesture();
-
-    // Methods from ::vendor::lineage::touch::V1_0::ITouchscreenGesture follow.
-    Return<void> getSupportedGestures(getSupportedGestures_cb resultCb) override;
-    Return<bool> setGestureEnabled(
-        const ::vendor::lineage::touch::V1_0::Gesture& gesture, bool enable) override;
-
-   private:
+private:
     std::map<int32_t, GestureInfo> kGestureInfoMap;
 };
 
-}  // namespace implementation
-}  // namespace V1_0
-}  // namespace touch
-}  // namespace lineage
-}  // namespace vendor
-
-#endif  // VENDOR_LINEAGE_TOUCH_V1_0_TOUCHSCREENGESTURE_H
+} // namespace touch
+} // namespace lineage
+} // namespace vendor
+} // namespace aidl
