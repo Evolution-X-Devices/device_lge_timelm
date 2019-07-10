@@ -205,6 +205,7 @@ ro.vendor.lge.swversion_short=V40d
 ro.logd.size=8M
 
 # Media
+debug.stagefright.c2inputsurface=-1
 media.stagefright.enable-aac=true
 media.stagefright.enable-fma2dp=true
 media.stagefright.enable-http=true
