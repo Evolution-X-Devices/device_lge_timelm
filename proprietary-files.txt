@@ -102,6 +102,7 @@ vendor/lib/libdrc.so
 vendor/lib/libqtigef.so
 vendor/lib/libssrec.so
 vendor/lib/libsurround_3mic_proc.so
+vendor/lib/libwebrtc_audio_preprocessing.so
 vendor/lib/soundfx/libaisound.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/liblgeffectwrapper.so
@@ -121,6 +122,7 @@ vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioconfigstore.so
 vendor/lib64/libaudioparsers.so
 vendor/lib64/libqtigef.so
+vendor/lib64/libwebrtc_audio_preprocessing.so
 vendor/lib64/libssrec.so
 vendor/lib64/soundfx/libaisound.so
 vendor/lib64/soundfx/libasphere.so
@@ -129,12 +131,6 @@ vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
 vendor/lib64/soundfx/libshoebox.so
-
-# Audio
-vendor/lib/hw/audio.primary.kona.so
-vendor/lib/libwebrtc_audio_preprocessing.so
-vendor/lib64/hw/audio.primary.kona.so
-vendor/lib64/libwebrtc_audio_preprocessing.so
 
 # Audio amplifier firmware
 vendor/firmware/tfa98xx.cnt
