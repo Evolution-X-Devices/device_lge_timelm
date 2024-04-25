@@ -24,6 +24,7 @@ source "${HELPER}"
 
 function vendor_imports() {
     cat <<EOF >>"$1"
+        "hardware/lge",
 		"hardware/qcom-caf/common/libqti-perfd-client",
 		"hardware/qcom-caf/sm8250",
 		"hardware/qcom-caf/wlan",

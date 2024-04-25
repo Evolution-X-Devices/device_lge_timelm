@@ -322,6 +322,10 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
+# RIL
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.4-service.lge
+
 # Rootdir
 PRODUCT_PACKAGES += \
     init.class_main.sh \
