@@ -291,22 +291,16 @@ vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
 # CVP
-system_ext/lib/vendor.qti.hardware.cvp@1.0.so
-system_ext/lib64/vendor.qti.hardware.cvp@1.0.so
 vendor/lib/libcvp2.so
 vendor/lib/libcvp2_hfi.so
 vendor/lib/libcvp_common.so
 vendor/lib/libcvpcpuRev_skel.so
-vendor/lib/vendor.qti.hardware.cvp@1.0.so
 vendor/lib64/libcvp2.so
 vendor/lib64/libcvp2_hfi.so
 vendor/lib64/libcvp_common.so
 vendor/lib64/libcvpcpuRev_skel.so
-vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
 # Display
-system_ext/lib/libsdm-disp-apis.qti.so
-system_ext/lib64/libsdm-disp-apis.qti.so
 vendor/bin/qdcmss
 vendor/etc/init/qdcmss.rc
 vendor/lib/libdpps.so
@@ -411,7 +405,6 @@ vendor/lib/libcpion.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/libhdcpsrm.so
-vendor/lib/libmmosal.so
 vendor/lib/liboemcrypto.so
 vendor/lib/libops.so
 vendor/lib/libqisl.so
@@ -439,7 +432,6 @@ vendor/lib64/libcpion.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libhdcpsrm.so
-vendor/lib64/libmmosal.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libops.so
 vendor/lib64/libqisl.so
@@ -645,9 +637,6 @@ vendor/lib64/libnpu.so
 vendor/lib64/libopenvx.so
 
 # Media
-system_ext/lib/libmmosal.so
-system_ext/lib/libmmparser_lite.so
-system_ext/lib64/libmmosal.so
 vendor/etc/seccomp_policy/mediacodec.policy
 vendor/etc/system_properties.xml
 vendor/lib/libmmosal.so
@@ -689,7 +678,6 @@ vendor/firmware/libpn557_fw.so:vendor/lib/libpn557_fw.so
 vendor/firmware/libpn557_fw.so
 vendor/firmware/libpn557_fw_64.so:vendor/lib64/libpn557_fw_64.so
 vendor/firmware/libpn557_fw_64.so
-vendor/lib64/vendor.nxp.nxpnfclegacy@1.0.so
 
 # NFC - JP variant
 vendor/bin/hw/android.hardware.nfc@1.2-service-cxd22xx
@@ -764,12 +752,6 @@ vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
-
-# Qualcomm Display Utils
-system_ext/lib/vendor.qti.hardware.qdutils_disp@1.0.so
-system_ext/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
-vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # Qualcomm Hardware Factory
 vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
