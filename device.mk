@@ -19,6 +19,7 @@ PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 # Overlays
 PRODUCT_PACKAGES += \
+    NcmTetheringOverlay \
     TimelmApertureOverlay \
     TimelmCarrierConfigOverlay \
     TimelmFrameworksOverlay \
