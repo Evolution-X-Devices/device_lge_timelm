@@ -4,7 +4,6 @@
 # Current blobs with ELF checks disabled:
 # libOmxVideoDSMode, libOmxVpp depend on libOmxCore, which is a GNU Makefile target
 # imsdatadaemon, libcne, libwqe, lowi-server, wigighalsvc depend on libwpa_client, which is a GNU Makefile target
-# lge_qcci_data, libril-qcril-hook-oem, libril-qc-qmi-1, libvss_resim_core depends on libril, which is a GNU Makefile target
 
 # ADSP
 vendor/bin/adsprpcd
@@ -902,9 +901,9 @@ vendor/lib/libqsap_sdk.so
 vendor/lib/libqsocket.so
 vendor/lib/libril-qc-logger.so
 vendor/lib/libril-qc-ltedirectdisc.so
-vendor/lib/libril-qc-qmi-1.so;DISABLE_CHECKELF
+vendor/lib/libril-qc-qmi-1.so
 vendor/lib/libril-qc-radioconfig.so
-vendor/lib/libril-qcril-hook-oem.so;DISABLE_CHECKELF
+vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/librilqmiservices.so
 vendor/lib/libsettings.so
 vendor/lib/libsystem_health_mon.so
@@ -958,9 +957,9 @@ vendor/lib64/libqsocket.so
 vendor/lib64/libril-qc-hal-qmi.so
 vendor/lib64/libril-qc-logger.so
 vendor/lib64/libril-qc-ltedirectdisc.so
-vendor/lib64/libril-qc-qmi-1.so;DISABLE_CHECKELF
+vendor/lib64/libril-qc-qmi-1.so
 vendor/lib64/libril-qc-radioconfig.so
-vendor/lib64/libril-qcril-hook-oem.so;DISABLE_CHECKELF
+vendor/lib64/libril-qcril-hook-oem.so
 vendor/lib64/librilqmiservices.so
 vendor/lib64/libsettings.so
 vendor/lib64/libsystem_health_mon.so
@@ -1104,10 +1103,10 @@ vendor/bin/hw/vendor.lge.hardware.lgdata@1.1-service
 vendor/etc/init/vendor.lge.hardware.lgdata@1.1-service.rc
 vendor/lib/LGDataFeature_vendor.so
 vendor/lib/lgdatavendorlib.so
-vendor/lib/lge_qcci_data.so;DISABLE_CHECKELF
+vendor/lib/lge_qcci_data.so
 vendor/lib64/LGDataFeature_vendor.so
 vendor/lib64/lgdatavendorlib.so
-vendor/lib64/lge_qcci_data.so;DISABLE_CHECKELF
+vendor/lib64/lge_qcci_data.so
 vendor/lib64/libembmsservice.so
 vendor/lib64/vendor.lge.hardware.lgdata@1.0.so
 vendor/lib64/vendor.lge.hardware.lgdata@1.1.so
@@ -1125,7 +1124,7 @@ vendor/lib/libvss_gnss_qcci.so
 vendor/lib/libvss_ims_qcci.so
 vendor/lib/libvss_nv_idl.so
 vendor/lib/libvss_nv_iface.so
-vendor/lib/libvss_resim_core.so;DISABLE_CHECKELF
+vendor/lib/libvss_resim_core.so
 vendor/lib/libvss_resim_idl.so
 vendor/lib/libvss_resim_iface.so
 vendor/lib/libvssims-impl.so
@@ -1138,7 +1137,7 @@ vendor/lib64/libvss_gnss_qcci.so
 vendor/lib64/libvss_ims_qcci.so
 vendor/lib64/libvss_nv_idl.so
 vendor/lib64/libvss_nv_iface.so
-vendor/lib64/libvss_resim_core.so;DISABLE_CHECKELF
+vendor/lib64/libvss_resim_core.so
 vendor/lib64/libvss_resim_idl.so
 vendor/lib64/libvss_resim_iface.so
 vendor/lib64/libvssims-impl.so
