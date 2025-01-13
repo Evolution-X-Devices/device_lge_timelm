@@ -653,4 +653,11 @@
     <!-- Whether or not wcg (wide color gamut) should be enabled on this device,
          we only enabled it while the device has ability of mixed color spaces composition -->
     <bool name="config_enableWcgMode">true</bool>
+
+    <!-- Whether to enable fp unlock when screen turns off on udfps devices -->
+    <bool name="config_screen_off_udfps_enabled">true</bool>
+
+    <!-- Default value for fp screen off unlock toggle, it only works for the devices that support
+         fp screen off unlock-->
+    <bool name="config_screen_off_udfps_default_on">false</bool>
 </resources>
