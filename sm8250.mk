@@ -120,7 +120,6 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
-    android.hardware.bluetooth.a2dp@1.0.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor \
     liba2dpoffload
@@ -177,7 +176,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    gralloc.kona \
     libdisplayconfig.qti \
     libdisplayconfig.system.qti \
     libqdMetaData \
@@ -186,7 +184,6 @@ PRODUCT_PACKAGES += \
     libsdmcore \
     libtinyxml \
     libvulkan \
-    memtrack.kona \
     vendor.display.config@1.16 \
     vendor.display.config@2.0 \
     vendor.display.config@1.16.vendor \
@@ -292,12 +289,7 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.0.vendor \
-    libOmxAacEnc \
-    libOmxAmrEnc \
     libOmxCore \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
     libavservices_minijail \
@@ -306,7 +298,6 @@ PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor \
-    libmm-omxcore \
     libstagefright_softomx.vendor \
     libstagefrighthw
 
