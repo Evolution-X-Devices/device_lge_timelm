@@ -30,6 +30,7 @@ ro.config.media_vol_steps=25
 persist.vendor.lge.3rd.speaker.prot.enable=on
 ro.vendor.audio.sdk.fluencetype=nxp
 ro.vendor.audio.sdk.ssr=false
+use.voice.path.for.pcm.voip=true
 vendor.audio.adm.buffering.ms=2
 vendor.audio.dolby.ds2.enabled=false
 vendor.audio.dolby.ds2.hardbypass=false
@@ -257,9 +258,6 @@ ro.soc.model=SM8250
 
 # Verity
 ro.apk_verity.mode=2
-
-# Voice
-vendor.voice.path.for.pcm.voip=false
 
 # Volume
 ro.config.vc_call_vol_steps=7

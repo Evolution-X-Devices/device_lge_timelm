@@ -30,5 +30,8 @@ persist.rmnet.data.enable=true
 # NFC
 ro.nfc.port=I2C
 
+# QC framework value-adds
+ro.vendor.qti.va_aosp.support=1
+
 # Time
 persist.timed.enable=true
