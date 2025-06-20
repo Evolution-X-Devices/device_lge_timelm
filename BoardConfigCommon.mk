@@ -6,9 +6,6 @@
 
 COMMON_PATH := device/lge/sm8250-common
 
-# Broken
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
 # A/B
 AB_OTA_UPDATER := true
 
