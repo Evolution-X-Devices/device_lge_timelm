@@ -140,12 +140,6 @@ PRODUCT_PACKAGES += \
     QuadDACPanel \
     vendor.lge.hardware.audio.dac.control@2.0-service.proprietary
 
-# Dexpreopt
-PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed
-USE_DEX2OAT_DEBUG := false
-WITH_DEXPREOPT_DEBUG_INFO := false
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
