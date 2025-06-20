@@ -95,9 +95,6 @@ BOARD_HAVE_QCOM_FM := true
 DEVICE_MATRIX_FILE += hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 
-# Init
-TARGET_RECOVERY_DEVICE_MODULES := libinit_lge_kona
-
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_CMDLINE := \
