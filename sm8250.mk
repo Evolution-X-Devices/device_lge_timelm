@@ -443,6 +443,7 @@ PRODUCT_BOOT_JARS += \
 
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
+    qca6390_firmware_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink \
     firmware_wlan_mac.bin_symlink
 

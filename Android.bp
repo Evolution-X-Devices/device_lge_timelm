@@ -18,6 +18,13 @@ install_symlink {
     symlink_target: "/mnt/vendor/persist-lg/wifi/wlan_mac.bin",
 }
 
+install_symlink {
+    name: "qca6390_firmware_symlink",
+    vendor: true,
+    installed_location: "firmware_mnt/image",
+    symlink_target: "/vendor/firmware/qca6390",
+}
+
 mkdir {
     name: "vendor_OP_mountpoint",
     dir: "OP",
