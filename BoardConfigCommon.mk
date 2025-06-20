@@ -96,7 +96,6 @@ DEVICE_MATRIX_FILE += hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_lge_kona
 TARGET_RECOVERY_DEVICE_MODULES := libinit_lge_kona
 
 # Kernel
