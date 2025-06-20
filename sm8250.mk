@@ -358,7 +358,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qti.fm.rc \
     init.target.rc \
-    init.target.wigig.rc \
     init.vendor.sensors.rc \
     ueventd.qcom.rc
 

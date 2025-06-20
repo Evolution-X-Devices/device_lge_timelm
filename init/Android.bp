@@ -203,13 +203,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-        name: "init.target.wigig.rc",
-        src: "init.target.wigig.rc",
-        sub_dir: "init/hw",
-        vendor: true,
-}
-
-prebuilt_etc {
         name: "init.vendor.sensors.rc",
         src: "init.vendor.sensors.rc",
         sub_dir: "init",
