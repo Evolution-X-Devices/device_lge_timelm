@@ -368,7 +368,7 @@ vendor/lib64/vendor.display.color@1.5.so
 vendor/lib64/vendor.display.postproc@1.0.so
 
 # DPM
-framework/tcmclient.jar
+system/framework/tcmclient.jar
 system_ext/bin/dpmd
 system_ext/etc/dpm/dpm.conf
 system_ext/etc/permissions/com.qti.dpmframework.xml
@@ -424,10 +424,6 @@ vendor/lib/libspl.so
 vendor/lib/libssd.so
 vendor/lib/libtrustedapploader.so
 vendor/lib/libtzdrmgenprov.so
-vendor/lib/libwfdcommonutils_proprietary.so
-vendor/lib/libwfddisplayconfig_proprietary.so
-vendor/lib/libwfdmmservice_proprietary.so
-vendor/lib/libwfdutils_proprietary.so
 vendor/lib/vendor.qti.hardware.qseecom@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
 vendor/lib64/libGPreqcancel.so
@@ -659,7 +655,6 @@ vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
-vendor/etc/seccomp_policy/mediacodec.policy
 vendor/lib/libqcodec2_base.so
 vendor/lib/libqcodec2_basecodec.so
 vendor/lib/libqcodec2_core.so
@@ -690,33 +685,6 @@ vendor/firmware/libpn557_fw.so:vendor/lib/libpn557_fw.so
 vendor/firmware/libpn557_fw.so
 vendor/firmware/libpn557_fw_64.so:vendor/lib64/libpn557_fw_64.so
 vendor/firmware/libpn557_fw_64.so
-
-# NFC - JP variant
-vendor/bin/hw/android.hardware.nfc@1.2-service-cxd22xx
-vendor/etc/init/android.hardware.nfc@1.2-service-cxd22xx.rc
-vendor/etc/libnfc-cxd-RF.conf
-vendor/etc/libnfc-cxd22xx.conf
-vendor/etc/nfc/PublicKey.txt
-vendor/etc/nfc/config.xml
-vendor/etc/nfc/config_AU.xml
-vendor/etc/nfc/config_CA.xml
-vendor/etc/nfc/config_CO.xml
-vendor/etc/nfc/config_COM.xml
-vendor/etc/nfc/config_HK.xml
-vendor/etc/nfc/config_IL.xml
-vendor/etc/nfc/config_JP.xml
-vendor/etc/nfc/config_KR.xml
-vendor/etc/nfc/config_LDU.xml
-vendor/etc/nfc/config_NZ.xml
-vendor/etc/nfc/config_PL.xml
-vendor/etc/nfc/config_US.xml
-vendor/firmware/cxd225x_firmware.bin
-
-# NFC - JP variant felica config
-product/etc/felica/common.cfg
-product/etc/felica/mfm.cfg
-product/etc/felica/mfs.cfg
-vendor/etc/felica/config_felica.xml
 
 # OMX
 vendor/lib/libOmxAacDec.so
@@ -857,7 +825,6 @@ vendor/bin/hw/qcrild
 vendor/bin/ks
 vendor/bin/mdm_helper
 vendor/bin/netmgrd
-vendor/bin/pd-mapper
 vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
 vendor/bin/qrtr-ns
@@ -881,8 +848,6 @@ vendor/etc/ssg/tz_whitelist.json
 vendor/lib/libconfigdb.so
 vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so
-vendor/lib/libminkdescriptor.so
-vendor/lib/libminksocket.so
 vendor/lib/libnetmgr.so
 vendor/lib/libnetmgr_common.so
 vendor/lib/libnetmgr_nr_fusion.so
@@ -895,7 +860,6 @@ vendor/lib/libqcbor.so
 vendor/lib/libqcmaputils.so
 vendor/lib/libqcrilFramework.so
 vendor/lib/libqcrildatactl.so
-vendor/lib/libqmi_csvt_srvc.so
 vendor/lib/libqrtr.so
 vendor/lib/libqsap_sdk.so
 vendor/lib/libqsocket.so
@@ -936,8 +900,6 @@ vendor/lib64/libconfigdb.so
 vendor/lib64/liblqe.so
 vendor/lib64/libmdmdetect.so
 vendor/lib64/libmdmimgload.so
-vendor/lib64/libminkdescriptor.so
-vendor/lib64/libminksocket.so
 vendor/lib64/libnetmgr.so
 vendor/lib64/libnetmgr_common.so
 vendor/lib64/libnetmgr_nr_fusion.so
@@ -950,7 +912,6 @@ vendor/lib64/libqcbor.so
 vendor/lib64/libqcmaputils.so
 vendor/lib64/libqcrilFramework.so
 vendor/lib64/libqcrildatactl.so
-vendor/lib64/libqmi_csvt_srvc.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqsap_sdk.so
 vendor/lib64/libqsocket.so
@@ -1278,7 +1239,7 @@ vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
 vendor/lib64/vendor.qti.hardware.wigig.supptunnel@1.0.so
 
 # WiFi Display
--framework/WfdCommon.jar
+system/framework/WfdCommon.jar
 system_ext/bin/wfdservice
 system_ext/bin/wfdservice64
 system_ext/etc/init/wfdservice.rc
