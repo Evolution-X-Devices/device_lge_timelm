@@ -46,6 +46,8 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'vendor/etc/init/vendor.sensors.sscrpcd.rc': blob_fixup()
         .regex_replace('class early_hal', 'class core'),
+    ('system_ext/lib/libwfdmmsrc_system.so', 'system_ext/lib64/libwfdmmsrc_system.so'): blob_fixup()
+	.add_needed('libgui_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
