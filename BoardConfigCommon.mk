@@ -108,7 +108,7 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.usbcontroller=a600000.dwc3 \
     kpti=off \
     cgroup.memory=nokmem,nosocket \
-    androidboot.init_fatal_reboot_target=recovery 
+    androidboot.init_fatal_reboot_target=recovery
 # BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
@@ -237,7 +237,7 @@ VENDOR_SECURITY_PATCH := 2023-07-01
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
-BOARD_AVB_VBMETA_SYSTEM := system vendor product 
+BOARD_AVB_VBMETA_SYSTEM := system vendor product
 BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
 BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
