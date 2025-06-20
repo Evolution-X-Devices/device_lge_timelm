@@ -321,6 +321,9 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
+# Recovery
+$(call soong_config_set,lineage_recovery,bootloader_message_offset,128)
+
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.4-service.lge
