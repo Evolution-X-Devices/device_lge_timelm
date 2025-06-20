@@ -1,0 +1,224 @@
+//
+// Copyright (C) 2019 The LineageOS Project
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+
+cc_library_static {
+    name: "libinit_lge_kona",
+    recovery_available: true,
+    srcs: ["init_lge_kona.cpp"],
+    include_dirs: [
+        "system/libbase/include",
+        "system/core/init"
+    ],
+    shared_libs: [
+        "libbase",
+    ]
+}
+
+// fstab
+prebuilt_etc {
+	name: "fstab.zram",
+	src: "fstab.zram",
+	vendor: true,
+}
+
+// Init scripts
+sh_binary {
+        name: "init.class_main.sh",
+        src: "init.class_main.sh",
+        vendor: true,
+}
+
+sh_binary {
+        name: "init.mdm.sh",
+        src: "init.mdm.sh",
+        vendor: true,
+}
+
+sh_binary {
+        name: "init.qcom.sh",
+        src: "init.qcom.sh",
+        vendor: true,
+}
+
+sh_binary {
+	name: "init.qcom.early_boot.sh",
+	src: "init.qcom.early_boot.sh",
+	vendor: true,
+}
+
+sh_binary {
+        name: "init.qcom.post_boot.sh",
+        src: "init.qcom.post_boot.sh",
+        vendor: true,
+}
+
+sh_binary {
+	name: "init.qcom.usb.sh",
+	src: "init.qcom.usb.sh",
+	vendor: true,
+}
+
+sh_binary {
+        name: "init.qti.chg_policy.sh",
+        src: "init.qti.chg_policy.sh",
+        vendor: true,
+}
+
+sh_binary {
+        name: "init.qti.dcvs.sh",
+        src: "init.qti.dcvs.sh",
+        vendor: true,
+}
+
+sh_binary {
+        name: "init.qti.fm.sh",
+        src: "init.qti.fm.sh",
+        vendor: true,
+}
+
+// Init configuration files
+prebuilt_etc {
+        name: "init.kona.rc",
+        src: "init.kona.rc",
+        sub_dir: "init/hw",
+        vendor: true,
+}
+
+prebuilt_etc {
+	name: "init.lge.audio.rc",
+	src: "init.lge.audio.rc",
+	sub_dir: "init/hw",
+	vendor: true,
+}
+
+prebuilt_etc {
+	name: "init.lge.display.rc",
+	src: "init.lge.display.rc",
+	sub_dir: "init/hw",
+	vendor: true,
+}
+
+prebuilt_etc {
+	name: "init.lge.fingerprints.rc",
+	src: "init.lge.fingerprints.rc",
+	sub_dir: "init/hw",
+	vendor: true,
+}
+
+prebuilt_etc {
+	name: "init.lge.power.rc",
+	src: "init.lge.power.rc",
+	sub_dir: "init/hw",
+        vendor: true,
+}
+
+prebuilt_etc {
+        name: "init.lge.sensors.rc",
+        src: "init.lge.sensors.rc",
+        sub_dir: "init/hw",
+        vendor: true,
+}
+
+prebuilt_etc {
+        name: "init.lge.vendor.on_boot.rc",
+        src: "init.lge.vendor.on_boot.rc",
+        sub_dir: "init",
+        vendor: true,
+}
+
+prebuilt_etc {
+        name: "init.lge.vendor.on_post_fs_data.rc",
+        src: "init.lge.vendor.on_post_fs_data.rc",
+        sub_dir: "init",
+        vendor: true,
+}
+
+prebuilt_etc {
+        name: "init.lge.vendor.on_post_fs.rc",
+        src: "init.lge.vendor.on_post_fs.rc",
+        sub_dir: "init",
+        vendor: true,
+}
+
+prebuilt_etc {
+        name: "init.lge.vendor.wmc.drv.rc",
+        src: "init.lge.vendor.wmc.drv.rc",
+        sub_dir: "init",
+        vendor: true,
+}
+
+prebuilt_etc {
+        name: "init.nfc_selector.rc",
+        src: "init.nfc_selector.rc",
+        sub_dir: "init/hw",
+        vendor: true,
+}
+
+prebuilt_etc {
+        name: "init.qcom.rc",
+        src: "init.qcom.rc",
+        sub_dir: "init/hw",
+        vendor: true,
+}
+
+prebuilt_etc {
+        name: "init.qti.fm.rc",
+        src: "init.qti.fm.rc",
+        sub_dir: "init/hw",
+        vendor: true,
+}
+
+prebuilt_etc {
+        name: "init.qcom.usb.rc",
+        src: "init.qcom.usb.rc",
+        sub_dir: "init/hw",
+        vendor: true,
+}
+
+prebuilt_etc {
+        name: "init.qcom.power.rc",
+        src: "init.qcom.power.rc",
+        sub_dir: "init/hw",
+        vendor: true,
+}
+
+prebuilt_etc {
+        name: "init.target.rc",
+        src: "init.target.rc",
+        sub_dir: "init/hw",
+        vendor: true,
+}
+
+prebuilt_etc {
+        name: "init.target.wigig.rc",
+        src: "init.target.wigig.rc",
+        sub_dir: "init/hw",
+        vendor: true,
+}
+
+prebuilt_etc {
+        name: "init.vendor.sensors.rc",
+        src: "init.vendor.sensors.rc",
+        sub_dir: "init",
+        vendor: true,
+}
+
+prebuilt_etc {
+	name: "ueventd.qcom.rc",
+	filename: "ueventd.rc",
+	src: "ueventd.qcom.rc",
+	vendor: true,
+}
