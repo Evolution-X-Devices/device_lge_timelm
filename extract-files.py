@@ -48,6 +48,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('class early_hal', 'class core'),
     'vendor/lib64/libwvhidl.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
+    'system_ext/bin/wfdservice': blob_fixup()
+        .add_needed('libwfdservice_shim.so'),
     ('system_ext/lib/libwfdmmsrc_system.so', 'system_ext/lib64/libwfdmmsrc_system.so'): blob_fixup()
 	.add_needed('libgui_shim.so'),
     'system_ext/lib64/libwfdnative.so': blob_fixup()
