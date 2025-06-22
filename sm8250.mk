@@ -72,8 +72,6 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     audio.usbv2.default \
-    audio.primary.kona \
-    audio_amplifier.lge \
     libaudiopreprocessing \
     libbatterylistener \
     libbundlewrapper \
