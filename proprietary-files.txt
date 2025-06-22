@@ -1,9 +1,6 @@
 # All unpinned blobs from V600 40d
 # timelm-user 13 TKQ1.220829.002 2318902104908 release-keys
 
-# Current blobs with ELF checks disabled:
-# libOmxVideoDSMode, libOmxVpp depend on libOmxCore, which is a GNU Makefile target
-
 # ADSP
 vendor/bin/adsprpcd
 vendor/bin/dspservice
@@ -690,8 +687,8 @@ vendor/lib/libOmxDsdDec.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxG711Dec.so
 vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxVideoDSMode.so;DISABLE_CHECKELF
-vendor/lib/libOmxVpp.so;DISABLE_CHECKELF
+vendor/lib/libOmxVideoDSMode.so
+vendor/lib/libOmxVpp.so
 vendor/lib/libOmxWmaDec.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libdsd2pcm.so
@@ -704,7 +701,7 @@ vendor/lib64/libOmxApeDec.so
 vendor/lib64/libOmxEvrcDec.so
 vendor/lib64/libOmxG711Dec.so
 vendor/lib64/libOmxQcelp13Dec.so
-vendor/lib64/libOmxVpp.so;DISABLE_CHECKELF
+vendor/lib64/libOmxVpp.so
 vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libmulawdec.so
 
