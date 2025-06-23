@@ -42,10 +42,6 @@ on fs
     restorecon_recursive /mnt/vendor/sns
 
 on late-fs
-    wait_for_prop hwservicemanager.ready true
-    # cto-mc-security@lge.com. block wait_for_keymaster due to booting speed.
-    # exec_start wait_for_keymaster
-    #mount_all /vendor/etc/fstab.qcom --late
 # LG_START
     mount_all /vendor/etc/fstab.${ro.hardware} --late
 # LG_END
