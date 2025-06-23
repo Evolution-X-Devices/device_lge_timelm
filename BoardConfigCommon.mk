@@ -76,7 +76,6 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # FM Radio
 BOARD_HAS_QCA_FM_SOC := hastings
-BOARD_HAVE_QCOM_FM := true
 
 # HIDL
 DEVICE_MATRIX_FILE += hardware/qcom-caf/common/compatibility_matrix.xml

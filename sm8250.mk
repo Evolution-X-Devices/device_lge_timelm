@@ -162,6 +162,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FM2
 
+$(call soong_config_set,libfmjni,vendor,qcom)
+
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
