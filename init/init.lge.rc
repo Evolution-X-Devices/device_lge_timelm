@@ -26,9 +26,40 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-on boot
+on early-init
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_tfa9878
 
-# Begin Display General Features
+on post-fs-data
+    mkdir /mnt/vendor/persist-lg/egis 0700 system system
+    mkdir /data/vendor/fingerprintdump 0775 system system
+
+	# Sensors
+    mkdir /mnt/vendor/sns/sensors/ 0755 system system
+    mkdir /mnt/vendor/sns/sensors/registry/ 0755 system system
+    mkdir /mnt/vendor/sns/sensors/registry/registry/ 0755 system system
+
+    chown system system /sys/devices/virtual/input/lge_sar_rf/regreset
+    chown system system /sys/devices/virtual/input/lge_sar_rf/onoff
+    chown system system /sys/devices/virtual/input/lge_sar_rf/checkallnear
+    chown system system /sys/devices/virtual/input/lge_sar_rf/docalibration
+    chown system system /sys/devices/virtual/input/lge_sar_rf/cntinputpins
+    chown system system /sys/devices/virtual/input/lge_sar_rf/regproxdata
+    chown system system /sys/devices/virtual/input/lge_sar_rf/proxstatus
+    chown system system /sys/devices/virtual/input/lge_sar_rf/check_far
+    chown system system /sys/devices/virtual/input/lge_sar_rf/check_mid
+
+    chmod 664 /sys/devices/virtual/input/lge_sar_rf/regreset
+    chmod 664 /sys/devices/virtual/input/lge_sar_rf/onoff
+    chmod 664 /sys/devices/virtual/input/lge_sar_rf/checkallnear
+    chmod 664 /sys/devices/virtual/input/lge_sar_rf/docalibration
+    chmod 664 /sys/devices/virtual/input/lge_sar_rf/cntinputpins
+    chmod 664 /sys/devices/virtual/input/lge_sar_rf/regproxdata
+    chmod 664 /sys/devices/virtual/input/lge_sar_rf/proxstatus
+    chmod 664 /sys/devices/virtual/input/lge_sar_rf/check_far
+    chmod 664 /sys/devices/virtual/input/lge_sar_rf/check_mid
+
+on boot
+	# Display features
 	chown system system /sys/class/panel/panel-0/drs/freeze_state_hal
 	chmod 664 /sys/class/panel/panel-0/drs/freeze_state_hal
 
@@ -43,9 +74,7 @@ on boot
 
 	chown system system /sys/class/panel/freeze_state_hal
 	chmod 664 /sys/class/panel/freeze_state_hal
-# End Display General Features
 
-# Begin Display Brigntness Features
 	chown system system /sys/class/backlight/panel0-backlight/brightness
 	chmod 664 /sys/class/backlight/panel0-backlight/brightness
 	chown system system /sys/class/backlight/panel0-backlight/max_brightness
@@ -118,9 +147,7 @@ on boot
 	chmod 444 /sys/class/panel/brightness/is_fp_hbm_mode
 	chown system system /sys/class/panel/brightness/tc_perf
 	chmod 664 /sys/class/panel/brightness/tc_perf
-# End Display Brigntness Features
 
-# Begin Display Aod Features
 	chown system system /sys/class/panel/panel-0/aod/area
 	chmod 664 /sys/class/panel/panel-0/aod/area
 	chown system system /sys/class/panel/panel-0/aod/power_mode
@@ -135,9 +162,7 @@ on boot
 	chmod 664 /sys/class/panel/aod/area
 	chown system system /sys/class/panel/aod/power_mode
 	chmod 664 /sys/class/panel/aod/power_mode
-# End Display Aod Features
 
-# Begin Img Tune Features
 	chown system system /sys/class/panel/panel-0/img_tune/rgb_tune
 	chmod 664 /sys/class/panel/panel-0/img_tune/rgb_tune
 	chown system system /sys/class/panel/panel-0/img_tune/screen_tune
@@ -252,9 +277,7 @@ on boot
 	chmod 664 /sys/class/panel/img_tune/daylight_mode
 	chown system system /sys/class/panel/img_tune/fps_status
 	chmod 444 /sys/class/panel/img_tune/fps_status
-# End Img Tune Features
 
-# Begin Accessory Features
 	chown system system /sys/class/smartcover/smartcover/state
 	chmod 664 /sys/class/smartcover/smartcover/state
 	chown system system /sys/class/switch/smartcover/state
@@ -283,14 +306,10 @@ on boot
 	chmod 664 /sys/class/extcon/extcon5/state
 	chown system system /sys/devices/platform/soc/soc:gpio_keys/cover_fw_update
 	chmod 664 /sys/devices/platform/soc/soc:gpio_keys/cover_fw_update
-# End Accessory Features
 
-# Begin Cover Features
 	chown system system /sys/devices/platform/soc/ae90000.qcom,dp_display/extcon/extcon5/state
 	chmod 664 /sys/devices/platform/soc/ae90000.qcom,dp_display/extcon/extcon5/state
-# End Cover Features
 
-# Begin Display Factory Features
 	chown system system /sys/class/panel/panel-0/factory/mfts_auto_touch_test_mode
 	chmod 664 /sys/class/panel/panel-0/factory/mfts_auto_touch_test_mode
 
@@ -299,4 +318,42 @@ on boot
 
 	chown system system /sys/class/panel/factory/mfts_auto_touch_test_mode
 	chmod 664 /sys/class/panel/factory/mfts_auto_touch_test_mode
-# End Display Factory Features
+
+	# Fingerprint
+	chown system system /dev/esfp0
+    chmod 0644 /dev/esfp0
+
+	# IRQ
+    write /sys/kernel/debug/clk/debug_suspend 1
+    write /sys/module/msm_show_resume_irq/parameters/debug_mask 1
+
+	# printk log level
+    write /proc/sys/kernel/printk "7 6 1 7"
+
+on property:vendor.lge.nfc_vendor=sony
+    stop vendor.nfc_hal_service
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules cxd22xx
+    start vendor.nfc_hal_service-cxd22xx
+
+on property:ro.vendor.lge.minios.bootstart=1
+    stop vendor.lge-biometrics-fingerprint-hal-2-2
+
+# LGE gbmd
+service vendor.gbmd /vendor/bin/gbmd
+   class main
+   socket gbm-client stream 660 system system
+   user system
+   group system
+
+# LGE prmd
+service vendor.prmd /vendor/bin/prmd
+   class main
+   socket prm-client stream 660 system system
+   user system
+   group system
+
+# LG Hiddenmenu smpl_count service
+service vendor.smpl_count /vendor/bin/smpl_count
+   class main
+   user root
+   oneshot

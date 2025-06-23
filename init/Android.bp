@@ -91,79 +91,16 @@ sh_binary {
 
 // Init configuration files
 prebuilt_etc {
-        name: "init.kona.rc",
-        src: "init.kona.rc",
-        sub_dir: "init/hw",
-        vendor: true,
-}
-
-prebuilt_etc {
-	name: "init.lge.audio.rc",
-	src: "init.lge.audio.rc",
+	name: "init.lge.rc",
+	src: "init.lge.rc",
 	sub_dir: "init/hw",
 	vendor: true,
 }
 
 prebuilt_etc {
-	name: "init.lge.display.rc",
-	src: "init.lge.display.rc",
-	sub_dir: "init/hw",
-	vendor: true,
-}
-
-prebuilt_etc {
-	name: "init.lge.fingerprints.rc",
-	src: "init.lge.fingerprints.rc",
-	sub_dir: "init/hw",
-	vendor: true,
-}
-
-prebuilt_etc {
-	name: "init.lge.power.rc",
-	src: "init.lge.power.rc",
-	sub_dir: "init/hw",
-        vendor: true,
-}
-
-prebuilt_etc {
-        name: "init.lge.sensors.rc",
-        src: "init.lge.sensors.rc",
-        sub_dir: "init/hw",
-        vendor: true,
-}
-
-prebuilt_etc {
-        name: "init.lge.vendor.on_boot.rc",
-        src: "init.lge.vendor.on_boot.rc",
+        name: "init.lge.vendor.rc",
+        src: "init.lge.vendor.rc",
         sub_dir: "init",
-        vendor: true,
-}
-
-prebuilt_etc {
-        name: "init.lge.vendor.on_post_fs_data.rc",
-        src: "init.lge.vendor.on_post_fs_data.rc",
-        sub_dir: "init",
-        vendor: true,
-}
-
-prebuilt_etc {
-        name: "init.lge.vendor.on_post_fs.rc",
-        src: "init.lge.vendor.on_post_fs.rc",
-        sub_dir: "init",
-        vendor: true,
-}
-
-prebuilt_etc {
-        name: "init.lge.vendor.wmc.drv.rc",
-        src: "init.lge.vendor.wmc.drv.rc",
-        sub_dir: "init",
-        vendor: true,
-}
-
-prebuilt_etc {
-        name: "init.nfc_selector.rc",
-        src: "init.nfc_selector.rc",
-        sub_dir: "init/hw",
         vendor: true,
 }
 

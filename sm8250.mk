@@ -333,17 +333,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     fstab.zram \
-    init.lge.audio.rc \
-    init.lge.display.rc \
-    init.lge.fingerprints.rc \
-    init.lge.power.rc \
-    init.lge.sensors.rc \
-    init.lge.vendor.on_boot.rc \
-    init.lge.vendor.on_post_fs_data.rc \
-    init.lge.vendor.on_post_fs.rc \
-    init.lge.vendor.wmc.drv.rc \
-    init.kona.rc \
-    init.nfc_selector.rc \
+    init.lge.rc \
+    init.lge.vendor.rc \
     init.qcom.power.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
