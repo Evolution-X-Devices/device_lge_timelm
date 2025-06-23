@@ -46,6 +46,10 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'vendor/etc/init/vendor.sensors.sscrpcd.rc': blob_fixup()
         .regex_replace('class early_hal', 'class core'),
+    'vendor/lib64/liblgdnnsnpe.so': blob_fixup()
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    'vendor/lib64/libimagerwrapper.so': blob_fixup()
+        .add_needed('liblog.so'),
     'vendor/lib64/libwvhidl.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
     'system_ext/bin/wfdservice': blob_fixup()
@@ -61,7 +65,7 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'sm8250-common',
+    'timelm',
     'lge',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,

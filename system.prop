@@ -97,5 +97,8 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 # Vendor
 ro.vendor.qti.va_aosp.support=1
 
+# Voice assistant
+ro.opa.device_model_id=time-deviceaction-time-aswlba
+
 # Wifi
 config.disable_rtt=true

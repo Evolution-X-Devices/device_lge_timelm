@@ -27,6 +27,7 @@ persist.vendor.audio.ras.enabled=false
 persist.vendor.audio.speaker.prot.enable=false
 persist.vendor.audio.spv3.enable=true
 persist.vendor.audio.voicecall.speaker.stereo=false
+persist.vendor.lge.3rd.speaker.prot.enable=on
 ro.vendor.audio.sdk.fluencetype=nxp
 ro.vendor.audio.sdk.ssr=false
 vendor.audio.adm.buffering.ms=2
@@ -85,6 +86,13 @@ persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=hastings
+
+# Camera
+camera.disable_zsl_mode=true
+ro.vendor.lge.logical.camera=2
+ro.vendor.lge.aux.camera=2
+ro.vendor.lge.physical.camera=5
+ro.vendor.lge.expose_tof_sensor=1
 
 # Charger
 persist.vendor.ctm.disallowed=1
@@ -170,6 +178,13 @@ vendor.gralloc.disable_ubwc=0
 
 # Keystore
 ro.hardware.keystore_desede=true
+
+# LGE
+ro.vendor.lge.build.target_country=COM
+ro.vendor.lge.build.target_operator=LAO
+ro.vendor.lge.swversion_arb=ARB00
+ro.vendor.lge.swversion=V60040d
+ro.vendor.lge.swversion_short=V40d
 
 # Log
 ro.logd.size=8M

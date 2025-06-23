@@ -29,6 +29,13 @@ cc_library_static {
 
 // fstab
 prebuilt_etc {
+	name: "fstab.timelm",
+	src: "fstab.timelm",
+	vendor: true,
+	ramdisk_available: true,
+}
+
+prebuilt_etc {
 	name: "fstab.zram",
 	src: "fstab.zram",
 	vendor: true,
@@ -120,8 +127,22 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+	name: "init.recovery.timelm.rc",
+	src: "init.recovery.timelm.rc",
+	sub_dir: "init",
+	recovery: true,
+}
+
+prebuilt_etc {
         name: "init.target.rc",
         src: "init.target.rc",
+        sub_dir: "init/hw",
+        vendor: true,
+}
+
+prebuilt_etc {
+        name: "init.timelm.rc",
+        src: "init.timelm.rc",
         sub_dir: "init/hw",
         vendor: true,
 }
