@@ -329,7 +329,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     init.qti.chg_policy.sh \
     init.qti.dcvs.sh \
-    init.qti.fm.sh
 
 PRODUCT_PACKAGES += \
     fstab.zram \
@@ -338,7 +337,6 @@ PRODUCT_PACKAGES += \
     init.qcom.power.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
-    init.qti.fm.rc \
     init.target.rc \
     init.vendor.sensors.rc \
     ueventd.qcom.rc

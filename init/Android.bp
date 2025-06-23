@@ -83,12 +83,6 @@ sh_binary {
         vendor: true,
 }
 
-sh_binary {
-        name: "init.qti.fm.sh",
-        src: "init.qti.fm.sh",
-        vendor: true,
-}
-
 // Init configuration files
 prebuilt_etc {
 	name: "init.lge.rc",
@@ -107,13 +101,6 @@ prebuilt_etc {
 prebuilt_etc {
         name: "init.qcom.rc",
         src: "init.qcom.rc",
-        sub_dir: "init/hw",
-        vendor: true,
-}
-
-prebuilt_etc {
-        name: "init.qti.fm.rc",
-        src: "init.qti.fm.rc",
         sub_dir: "init/hw",
         vendor: true,
 }
