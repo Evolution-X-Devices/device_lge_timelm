@@ -79,12 +79,6 @@ sh_binary {
 }
 
 sh_binary {
-        name: "init.qti.chg_policy.sh",
-        src: "init.qti.chg_policy.sh",
-        vendor: true,
-}
-
-sh_binary {
         name: "init.qti.dcvs.sh",
         src: "init.qti.dcvs.sh",
         vendor: true,
