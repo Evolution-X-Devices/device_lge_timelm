@@ -62,6 +62,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hidl.base@1.0.so', 'libhidlbase.so')
 	.add_needed('libbinder_shim.so')
         .add_needed('libinput_shim.so'),
+    'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so': blob_fixup()
+	.sig_replace('9A 0A 00 94', 'E0 03 00 AA'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
