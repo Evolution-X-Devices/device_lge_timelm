@@ -1,5 +1,5 @@
-# All unpinned blobs from V600 40d
-# timelm-user 13 TKQ1.220829.002 2318902104908 release-keys
+## All proprietary files from this list, unless pinned and noted otherwise,
+## are from V600TM40d (TKQ1.220829.002).
 
 # ACDB
 vendor/etc/acdbdata/Bluetooth_cal.acdb
