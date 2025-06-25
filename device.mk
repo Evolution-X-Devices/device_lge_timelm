@@ -317,10 +317,6 @@ PRODUCT_PACKAGES += \
 # Recovery
 $(call soong_config_set,lineage_recovery,bootloader_message_offset,128)
 
-# RIL
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.4-service.lge
-
 # Rootdir
 PRODUCT_PACKAGES += \
     init.class_main.sh \

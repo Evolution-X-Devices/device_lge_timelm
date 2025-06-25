@@ -52,6 +52,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('liblog.so'),
     'vendor/lib64/libwvhidl.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
+    'vendor/lib64/libril-qc-hal-qmi.so': blob_fixup()
+	.replace_needed('vendor.lge.hardware.radio@2.0.so', 'vendor.lge.hardware.radio@2.0_vendor.so'),
     'system_ext/bin/wfdservice': blob_fixup()
         .add_needed('libwfdservice_shim.so'),
     'system_ext/lib/libwfdmmsrc_system.so': blob_fixup()
