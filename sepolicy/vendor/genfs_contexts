@@ -10,7 +10,6 @@ genfscon sysfs /devices/platform/soc/ae90000.qcom,dp_display/extcon             
 genfscon sysfs /devices/platform/vendor/vendor:lge_usb_ds2/extcon                    u:object_r:sysfs_extcon:s0
 
 # Light
-genfscon sysfs /devices/virtual/panel/brightness                                     u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /class/lg_rgb_led/use_patterns                                        u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/virtual/lg_rgb_led/use_patterns                              u:object_r:sysfs_leds:s0
 
