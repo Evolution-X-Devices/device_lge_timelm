@@ -1,7 +1,6 @@
-# AAudio
-aaudio.mmap_policy=2
-aaudio.mmap_exclusive_policy=2
-aaudio.hw_burst_min_usec=2000
+# Audio
+audio.sys.noisy.broadcast.delay=500
+audio.sys.offload.pstimeout.secs=3
 
 # Voice assistant
 ro.opa.eligible_device=true
