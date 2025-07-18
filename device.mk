@@ -159,7 +159,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.lge_sm8250
+    android.hardware.biometrics.fingerprint@2.3-service.lge
 
 # FM packages
 PRODUCT_PACKAGES += \
