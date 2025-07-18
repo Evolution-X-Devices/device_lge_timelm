@@ -19,12 +19,14 @@ PRODUCT_AAPT_PREF_CONFIG := 560dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 # Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage
+
 PRODUCT_PACKAGES += \
     TimelmApertureOverlay \
     TimelmCarrierConfigOverlay \
     TimelmFrameworksOverlay \
     TimelmSettingsOverlay \
-    TimelmSettingsProviderOverlay \
     TimelmSystemUIOverlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
