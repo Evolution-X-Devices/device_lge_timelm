@@ -204,6 +204,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay-service.lge
 
+$(call soong_config_set,livedisplay_lge,enable_se,true)
+$(call soong_config_set,livedisplay_lge,enable_ce,true)
+
 # Media
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc) \
