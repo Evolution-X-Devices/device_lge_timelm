@@ -9,7 +9,6 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 from extract_utils.fixups_lib import (
-    lib_fixup_remove,
     lib_fixups,
     lib_fixups_user_type,
 )
@@ -53,19 +52,19 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libwvhidl.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
     'vendor/lib64/libril-qc-hal-qmi.so': blob_fixup()
-	.replace_needed('vendor.lge.hardware.radio@2.0.so', 'vendor.lge.hardware.radio@2.0_vendor.so'),
+	    .replace_needed('vendor.lge.hardware.radio@2.0.so', 'vendor.lge.hardware.radio@2.0_vendor.so'),
     'system_ext/bin/wfdservice': blob_fixup()
         .add_needed('libwfdservice_shim.so'),
     'system_ext/lib/libwfdmmsrc_system.so': blob_fixup()
-	.add_needed('libgui_shim.so'),
+	    .add_needed('libgui_shim.so'),
     'system_ext/lib/libwfdservice.so': blob_fixup()
         .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V4-cpp.so'),
     'system_ext/lib64/libwfdnative.so': blob_fixup()
         .replace_needed('android.hidl.base@1.0.so', 'libhidlbase.so')
-	.add_needed('libbinder_shim.so')
+	    .add_needed('libbinder_shim.so')
         .add_needed('libinput_shim.so'),
     'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so': blob_fixup()
-	.sig_replace('9A 0A 00 94', 'E0 03 00 AA'),
+	    .sig_replace('9A 0A 00 94', 'E0 03 00 AA'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
