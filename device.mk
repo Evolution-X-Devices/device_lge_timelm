@@ -177,7 +177,7 @@ $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_lge_kona
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout)
 
 # IPACM
 PRODUCT_PACKAGES += \
@@ -204,13 +204,13 @@ $(call soong_config_set,livedisplay_lge,enable_ce,true)
 
 # Media
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
     com.android.nfc_extras \
-    Tag \
+    Tag
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/nfc/,$(TARGET_COPY_OUT_VENDOR)/etc)
