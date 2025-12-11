@@ -54,6 +54,8 @@ blob_fixups: blob_fixups_user_type = {
 	    .replace_needed('vendor.lge.hardware.radio@2.0.so', 'vendor.lge.hardware.radio@2.0_vendor.so'),
     'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so': blob_fixup()
 	    .sig_replace('9A 0A 00 94', 'E0 03 00 AA'),
+    'vendor/lib64/libdpps.so': blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
