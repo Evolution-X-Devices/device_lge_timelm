@@ -587,7 +587,6 @@ vendor/lib64/libfastcvopt.so
 vendor/lib64/hw/fingerprint.kona.so
 vendor/lib64/libRbsFlow.so
 vendor/lib64/libets_teeclient_v2.so
-vendor/lib64/libfpsph.so
 
 # FM
 system_ext/lib64/fm_helium.so
@@ -1035,13 +1034,6 @@ vendor/lib64/libvss_resim_idl.so
 vendor/lib64/libvss_resim_iface.so
 vendor/lib64/libvssims-impl.so
 vendor/lib64/vendor.lge.hardware.vss_ims@1.0.so
-
-# Resolution Control
-vendor/bin/hw/vendor.lge.hardware.powerhint.rescontrol@2.0-service
-vendor/etc/init/vendor.lge.hardware.powerhint.rescontrol@2.0-service.rc
-vendor/lib64/libvendor_rescontrol.so
-vendor/lib64/vendor.lge.hardware.powerhint.rescontrol@2.0-common.so
-vendor/lib64/vendor.lge.hardware.powerhint.rescontrol@2.0.so
 
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service

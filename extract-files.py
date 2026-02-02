@@ -56,6 +56,11 @@ blob_fixups: blob_fixups_user_type = {
 	    .sig_replace('9A 0A 00 94', 'E0 03 00 AA'),
     'vendor/lib64/libdpps.so': blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
+    'vendor/lib64/libets_teeclient_v2.so': (
+        blob_fixup()
+            .remove_needed('libfpsph.so')
+            .add_needed('libets_teeclient_v2_shim.so')
+    ),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
