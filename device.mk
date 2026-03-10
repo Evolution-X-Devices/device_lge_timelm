@@ -290,11 +290,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client
 
-# QMI
-PRODUCT_PACKAGES += \
-    libvndfwk_detect_jni.qti \
-    libvndfwk_detect_jni.qti.vendor
-
 # Recovery
 $(call soong_config_set,lineage_recovery,bootloader_message_offset,128)
 
