@@ -28,10 +28,6 @@
 #
 #
 
-if [ "$(getprop ro.vendor.lge.platform.type)" != "jump" ]; then
-    exit 1;
-fi
-
 # Set platform variables
 soc_hwplatform=`cat /sys/devices/soc0/hw_platform 2> /dev/null`
 soc_machine=`cat /sys/devices/soc0/machine 2> /dev/null`
