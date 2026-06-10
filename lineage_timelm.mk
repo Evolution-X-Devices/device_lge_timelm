@@ -17,8 +17,8 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_NAME := lineage_timelm
 PRODUCT_DEVICE := timelm
 PRODUCT_MANUFACTURER := LGE
-PRODUCT_BRAND := LGE
-PRODUCT_MODEL := V60 ThinQ
+PRODUCT_BRAND := lge
+PRODUCT_MODEL := LM-V600
 
 PRODUCT_GMS_CLIENTID_BASE := android-lge
 
