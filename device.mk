@@ -294,6 +294,10 @@ PRODUCT_SOONG_NAMESPACES += \
 # Recovery
 $(call soong_config_set,lineage_recovery,bootloader_message_offset,128)
 
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.4-service.lge
+
 # Rootdir
 PRODUCT_PACKAGES += \
     init.mdm.sh \
