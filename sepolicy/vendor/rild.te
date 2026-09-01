@@ -7,3 +7,4 @@ r_dir_file(rild, op_file);
 allow rild mnt_vendor_file:dir search;
 allow rild persist_lg_data_file:dir search;
 allow rild persist_lg_data_file:sock_file write;
+allow rild vendor_diag_device:chr_file rw_file_perms;
