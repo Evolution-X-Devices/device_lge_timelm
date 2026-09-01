@@ -1,3 +1,5 @@
 allow vendor_sensors_qti vendor_persist_sensors_file:dir search;
 
 allow vendor_sensors_qti vendor_persist_sensors_file:fifo_file {create rw_file_perms};
+
+allow vendor_sensors_qti vendor_diag_device:chr_file rw_file_perms;

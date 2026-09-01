@@ -4,3 +4,6 @@ allow vendor_sensors sns_file:dir { create };
 allow vendor_sensors sns_file:file { create };
 
 allow vendor_sensors vendor_persist_file:dir search;
+
+allow vendor_sensors sns_file:file rename;
+allow vendor_sensors sns_file:file unlink;
