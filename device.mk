@@ -400,6 +400,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
 
+PRODUCT_PACKAGES += \
+    Iwlan \
+    QualifiedNetworksService
+    
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
     qca6390_firmware_symlink \
