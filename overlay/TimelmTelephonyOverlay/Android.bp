@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "TimelmTelephonyOverlay",
+    resource_dirs: ["res"],
+    manifest: "AndroidManifest.xml",
+    certificate: "platform",
+    product_specific: true,
