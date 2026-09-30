@@ -295,7 +295,7 @@ $(call soong_config_set,lineage_recovery,bootloader_message_offset,128)
 
 # Radio
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.5-service.lge
+    android.hardware.radio-service.lge
 
 # Rootdir
 PRODUCT_PACKAGES += \
