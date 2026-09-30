@@ -1002,7 +1002,6 @@ vendor/lib64/LGDataFeature_vendor.so
 vendor/lib64/lgdatavendorlib.so
 vendor/lib64/lge_qcci_data.so
 vendor/lib64/libembmsservice.so
-vendor/lib64/vendor.lge.hardware.lgdata@1.0.so
 vendor/lib64/vendor.lge.hardware.lgdata@1.1.so
 vendor/lib64/vendor.qti.hardware.embmssl@1.0.so
 vendor/lib64/vendor.qti.hardware.embmssl@1.1.so
