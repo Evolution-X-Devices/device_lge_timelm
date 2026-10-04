@@ -63,6 +63,7 @@ lib_fixups: lib_fixups_user_type = {
         'libmorpho_image_stab31',
         'libmpbase',
         'libSRIyuv',
+        'vendor.lge.hardware.vss_ims@1.0',
     ): lib_fixup_system_ext_suffix,
 }
 
