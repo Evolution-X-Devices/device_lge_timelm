@@ -1,2 +1,0 @@
-get_prop(system_app, lge_aisound_prop)
-set_prop(system_app, lge_aisound_prop)
