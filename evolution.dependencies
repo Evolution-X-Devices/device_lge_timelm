@@ -2,6 +2,7 @@
   {
     "repository": "hardware_lge",
     "target_path": "hardware/lge"
+    "branch": "cnb"
   },
   {
     "repository": "kernel_lge_sm8250",
@@ -10,5 +11,6 @@
   {
     "repository": "vendor_lge_timelm",
     "target_path": "vendor/lge/timelm"
+    "branch": "cnb"
   }
 ]
