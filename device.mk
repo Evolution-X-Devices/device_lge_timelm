@@ -137,7 +137,8 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey
+    android.hardware.drm-service.clearkey \
+    duck_rkp
 
 # Fingerprint
 $(call inherit-product, hardware/lge/fingerprint/udfps.mk)
