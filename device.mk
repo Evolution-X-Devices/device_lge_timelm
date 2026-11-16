@@ -301,6 +301,11 @@ $(call soong_config_set,lineage_recovery,bootloader_message_offset,128)
 PRODUCT_PACKAGES += \
     android.hardware.radio-service.lge
 
+# IMS JNI Symlinks
+PRODUCT_PACKAGES += \
+    Ims6_libimscamera_jni_symlink \
+    Ims6_libimsmedia_jni_symlink
+
 # Rootdir
 PRODUCT_PACKAGES += \
     init.mdm.sh \
